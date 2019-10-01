@@ -43,7 +43,7 @@ class Provider extends AbstractServiceSetter
 
             case 'file_system':
             default:
-                $adapter = new Local($this->getContainer()->getParameter('kernel.root_dir').'/../web');
+                $adapter = new Local($this->getConfig()['web_root']);
                 return new Filesystem($adapter);
                 break;
         }

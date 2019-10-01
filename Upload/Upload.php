@@ -220,7 +220,7 @@ class Upload extends AbstractServiceSetter
     
     protected function getWebDirectory()
     {
-        return $this->getContainer()->getParameter('kernel.root_dir') . '/../web';
+        return $this->getConfig()['web_root'];
     }
     
     /**

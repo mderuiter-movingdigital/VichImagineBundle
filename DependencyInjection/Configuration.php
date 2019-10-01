@@ -23,6 +23,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('storage')->defaultValue('file_system')->end()
+                ->scalarNode('web_root')->defaultValue('%kernel.root_dir%/../web')->end()
             ->end()
         ;
         // Here you should define the parameters that are allowed to

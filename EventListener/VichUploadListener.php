@@ -74,7 +74,7 @@ class VichUploadListener extends Event
      */
     private function getAbsoluteDir()
     {
-        return $this->getContainer()->getParameter('kernel.root_dir') . '/../web' . $this->getRelativeDir();
+        return $this->getContainer()->getParameter('vich_imagine')['web_root'] . $this->getRelativeDir();
     }
     
     /**
